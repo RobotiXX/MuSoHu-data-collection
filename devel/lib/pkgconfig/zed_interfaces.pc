@@ -1,0 +1,8 @@
+prefix=/home/robotixx_user/human-pov-navigation/devel
+
+Name: zed_interfaces
+Description: Description of zed_interfaces
+Version: 3.5.0
+Cflags: -I/home/robotixx_user/human-pov-navigation/devel/include -I/home/robotixx_user/human-pov-navigation/src/zed-ros-wrapper/zed-ros-interfaces/include
+Libs: -L${prefix}/lib 
+Requires: message_generation std_msgs geometry_msgs sensor_msgs

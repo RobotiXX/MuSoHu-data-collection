@@ -1,0 +1,8 @@
+prefix=/home/robotixx_user/human-pov-navigation/install
+
+Name: zed_sync_test
+Description: Description of zed_sync_test
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp nodelet image_transport message_filters sensor_msgs

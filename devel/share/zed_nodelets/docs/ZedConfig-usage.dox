@@ -1,0 +1,21 @@
+\subsubsection usage Usage
+\verbatim
+<node name="zed_nodelets" pkg="zed_nodelets" type="zed_nodelets">
+  <param name="pub_frame_rate" type="double" value="15.0" />
+  <param name="depth_confidence" type="int" value="50" />
+  <param name="depth_texture_conf" type="int" value="100" />
+  <param name="point_cloud_freq" type="double" value="15.0" />
+  <param name="brightness" type="int" value="4" />
+  <param name="contrast" type="int" value="4" />
+  <param name="hue" type="int" value="0" />
+  <param name="saturation" type="int" value="4" />
+  <param name="sharpness" type="int" value="4" />
+  <param name="gamma" type="int" value="8" />
+  <param name="auto_exposure_gain" type="bool" value="True" />
+  <param name="gain" type="int" value="100" />
+  <param name="exposure" type="int" value="100" />
+  <param name="auto_whitebalance" type="bool" value="True" />
+  <param name="whitebalance_temperature" type="int" value="42" />
+</node>
+\endverbatim
+

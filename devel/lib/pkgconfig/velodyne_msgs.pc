@@ -1,0 +1,8 @@
+prefix=/home/robotixx_user/human-pov-navigation/devel
+
+Name: velodyne_msgs
+Description: Description of velodyne_msgs
+Version: 1.7.0
+Cflags: -I/home/robotixx_user/human-pov-navigation/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs

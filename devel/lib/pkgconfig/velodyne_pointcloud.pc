@@ -1,0 +1,8 @@
+prefix=/home/robotixx_user/human-pov-navigation/devel
+
+Name: velodyne_pointcloud
+Description: Description of velodyne_pointcloud
+Version: 1.7.0
+Cflags: -I/home/robotixx_user/human-pov-navigation/devel/include -I/home/robotixx_user/human-pov-navigation/src/velodyne/velodyne_pointcloud/include
+Libs: -L${prefix}/lib -lvelodyne_rawdata -ldata_containers
+Requires: angles nodelet roscpp roslib sensor_msgs tf2_ros velodyne_driver velodyne_msgs dynamic_reconfigure diagnostic_updater

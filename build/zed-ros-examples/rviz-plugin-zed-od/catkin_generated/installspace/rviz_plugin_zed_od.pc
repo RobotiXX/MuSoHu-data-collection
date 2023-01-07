@@ -1,0 +1,8 @@
+prefix=/home/robotixx_user/human-pov-navigation/install
+
+Name: rviz_plugin_zed_od
+Description: Description of rviz_plugin_zed_od
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: zed_interfaces

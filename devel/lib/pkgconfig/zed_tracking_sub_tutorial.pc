@@ -1,0 +1,8 @@
+prefix=/home/robotixx_user/human-pov-navigation/devel
+
+Name: zed_tracking_sub_tutorial
+Description: Description of zed_tracking_sub_tutorial
+Version: 3.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

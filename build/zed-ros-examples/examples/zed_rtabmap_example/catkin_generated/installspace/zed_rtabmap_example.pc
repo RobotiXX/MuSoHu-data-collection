@@ -1,0 +1,8 @@
+prefix=/home/robotixx_user/human-pov-navigation/install
+
+Name: zed_rtabmap_example
+Description: Description of zed_rtabmap_example
+Version: 3.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

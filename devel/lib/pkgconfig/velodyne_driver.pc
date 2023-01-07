@@ -1,0 +1,8 @@
+prefix=/home/robotixx_user/human-pov-navigation/devel
+
+Name: velodyne_driver
+Description: Description of velodyne_driver
+Version: 1.7.0
+Cflags: -I/home/robotixx_user/human-pov-navigation/devel/include -I/home/robotixx_user/human-pov-navigation/src/velodyne/velodyne_driver/include
+Libs: -L${prefix}/lib -lvelodyne_input
+Requires: diagnostic_updater dynamic_reconfigure nodelet roscpp tf velodyne_msgs

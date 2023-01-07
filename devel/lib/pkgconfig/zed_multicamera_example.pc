@@ -1,0 +1,8 @@
+prefix=/home/robotixx_user/human-pov-navigation/devel
+
+Name: zed_multicamera_example
+Description: Description of zed_multicamera_example
+Version: 3.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
