@@ -43,7 +43,7 @@ roslaunch custom_package myLaunch.launch
 
 ### Record data:
 
-![GIF](figures/musohu_header.gif | width=150)
+![GIF](figures/musohu_header.gif)
 
 In terminal 2 :
 ```
