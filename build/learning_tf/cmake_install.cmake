@@ -1,8 +1,8 @@
-# Install script for directory: /home/robotixx_user/catkin_ws/src/learning_tf
+# Install script for directory: /home/robotixx_user/human-pov-navigation/src/learning_tf
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robotixx_user/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robotixx_user/human-pov-navigation/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robotixx_user/catkin_ws/build/learning_tf/catkin_generated/installspace/learning_tf.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robotixx_user/human-pov-navigation/build/learning_tf/catkin_generated/installspace/learning_tf.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/learning_tf/cmake" TYPE FILE FILES
-    "/home/robotixx_user/catkin_ws/build/learning_tf/catkin_generated/installspace/learning_tfConfig.cmake"
-    "/home/robotixx_user/catkin_ws/build/learning_tf/catkin_generated/installspace/learning_tfConfig-version.cmake"
+    "/home/robotixx_user/human-pov-navigation/build/learning_tf/catkin_generated/installspace/learning_tfConfig.cmake"
+    "/home/robotixx_user/human-pov-navigation/build/learning_tf/catkin_generated/installspace/learning_tfConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/learning_tf" TYPE FILE FILES "/home/robotixx_user/catkin_ws/src/learning_tf/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/learning_tf" TYPE FILE FILES "/home/robotixx_user/human-pov-navigation/src/learning_tf/package.xml")
 endif()
 

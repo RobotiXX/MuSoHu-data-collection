@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robotixx_user/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/robotixx_user/human-pov-navigation/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robotixx_user/catkin_ws/build
+CMAKE_BINARY_DIR = /home/robotixx_user/human-pov-navigation/build
 
 # Utility rule file for geometry_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ learning_tf/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build: geometry_m
 .PHONY : learning_tf/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 
 learning_tf/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
-	cd /home/robotixx_user/catkin_ws/build/learning_tf && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/robotixx_user/human-pov-navigation/build/learning_tf && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : learning_tf/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 
 learning_tf/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend:
-	cd /home/robotixx_user/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robotixx_user/catkin_ws/src /home/robotixx_user/catkin_ws/src/learning_tf /home/robotixx_user/catkin_ws/build /home/robotixx_user/catkin_ws/build/learning_tf /home/robotixx_user/catkin_ws/build/learning_tf/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robotixx_user/human-pov-navigation/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robotixx_user/human-pov-navigation/src /home/robotixx_user/human-pov-navigation/src/learning_tf /home/robotixx_user/human-pov-navigation/build /home/robotixx_user/human-pov-navigation/build/learning_tf /home/robotixx_user/human-pov-navigation/build/learning_tf/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : learning_tf/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
 
