@@ -22,8 +22,6 @@ bagName = f"data/{date}_{initial}_{scene}_{trajectory_number}_{context}"  #"data
 
 arg = ["rosbag", "record", "-O", f'{bagName}', f'--duration={durationTime}', '/chatter']
 
-# rosbag record -O session --duration=30 /chatter /rosout /tf
-
 f = open(fileName, 'r')
 
 lines = f.readlines()
