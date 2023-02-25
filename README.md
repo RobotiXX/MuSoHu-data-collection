@@ -43,6 +43,8 @@ roslaunch custom_package myLaunch.launch
 
 ### Record data
 
+![Perception image](figures/scenes.jpg)
+
 In terminal 2 :
 ```
 python3 record.py
