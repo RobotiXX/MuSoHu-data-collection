@@ -1,4 +1,8 @@
-# MuSoHu: Multi-Modal Social Human Navigation Dataset [Website](https://cs.gmu.edu/~xiao/Research/MuSoHu/MuSoHu.html).
+# [MuSoHu](https://cs.gmu.edu/~xiao/Research/MuSoHu/MuSoHu.html): Multi-Modal Social Human Navigation Dataset.
+
+![GIF](figures/musohu_header.gif)
+
+![TF Tree](figures/frames.pdf)
 
 ### Dependencies :
 
