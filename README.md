@@ -8,7 +8,7 @@
 
 > Python 3.8.10.
 
-> Lidar driver [Velodyne VLP-16](https://github.com/ros-drivers/velodyne).
+> LiDAR driver [Velodyne VLP-16](https://github.com/ros-drivers/velodyne).
 
 > Stereo camera driver [ZED2](https://github.com/stereolabs/zed-ros-wrapper).
 
