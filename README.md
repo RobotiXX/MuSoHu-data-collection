@@ -2,7 +2,7 @@
 
 ![GIF](figures/musohu_header.gif)
 
-[Link to TF Tree / URDF](figures/frames.pdf)
+![GIF](figures/helmet_data_collection.jpg)
 
 ### Dependencies :
 
@@ -47,3 +47,4 @@ In terminal 2 :
 ```
 python3 record.py
 ```
+[Link to TF Tree / URDF](figures/frames.pdf)
