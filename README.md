@@ -34,16 +34,16 @@ cd catkin_ws; catkin_make; source devel/setup.bash
 
 ### Launch visualization: 
 
-![GIF](figures/musohu_header.gif)
+![Perception image](figures/scenes.jpg)
 
 In terminal 1 :
 ```
 roslaunch custom_package myLaunch.launch
 ```
 
-### Record data
+### Record data:
 
-![Perception image](figures/scenes.jpg)
+![GIF](figures/musohu_header.gif | width=150)
 
 In terminal 2 :
 ```
