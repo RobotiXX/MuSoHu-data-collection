@@ -1,8 +1,6 @@
 # [MuSoHu](https://cs.gmu.edu/~xiao/Research/MuSoHu/MuSoHu.html): Multi-Modal Social Human Navigation Dataset.
 
-![GIF](figures/musohu_header.gif)
-
-![GIF](figures/helmet_data_collection.jpg)
+![Suite image](figures/helmet_data_collection.jpg)
 
 ### Dependencies :
 
@@ -35,6 +33,8 @@ cd catkin_ws; catkin_make; source devel/setup.bash
 ```
 
 ### Launch visualization: 
+
+![GIF](figures/musohu_header.gif)
 
 In terminal 1 :
 ```
