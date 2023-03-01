@@ -1,4 +1,4 @@
-# [MuSoHu](https://cs.gmu.edu/~xiao/Research/MuSoHu/MuSoHu.html): Multi-Modal Social Human Navigation Dataset.
+# [MuSoHu](https://cs.gmu.edu/~xiao/Research/MuSoHu/): Multi-Modal Social Human Navigation Dataset.
 
 ![Suite image](figures/helmet_data_collection.jpg)
 
