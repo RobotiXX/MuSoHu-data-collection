@@ -38,7 +38,7 @@ cd catkin_ws; catkin_make; source devel/setup.bash
 
 In terminal 1 :
 ```
-roslaunch custom_package myLaunch.launch
+roslaunch musohu_package musohu_suite.launch
 ```
 
 ### Record data:
