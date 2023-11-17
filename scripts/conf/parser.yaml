@@ -1,0 +1,39 @@
+# Parser config
+parsed_dir: "data/train" # where to store/read parsed bags
+sample_rate: 4.0 # number of frames per second (hz)
+pred_len: 8 # action prediction length
+obs_len: 6 # observation length
+musohu:
+  bags_dir: "data/bags/musohu" # MuSoHu bags directory
+  ang_offset: 0.0
+  skip_traj_shorter: 50 # skip trajectories with fewer frames than skip_traj_short_traj
+  topics: # topic names for each sensor
+    depth: ["/zed2/zed_node/depth/depth_registered/compressed"]
+    rgb: ["/zed2/zed_node/rgb/image_rect_color/compressed"]
+    odom: ["/zed2/zed_node/odom"]
+    cmd_vel: ["/action"] # linear and angular velocities
+    lidar: ["/velodyne_points"]
+  functions:
+    rgb: "process_rgb"
+    depth: "process_rgb"
+    lidar: "process_pointclouds"
+    odom: "nav_to_xy_yaw"
+
+scand:
+  bags_dir: "data/bags/scand" # SCAND bags directory
+  ang_offset: 0.0
+  skip_traj_shorter: 20 # skip trajectories with fewer frames than skip_traj_short_traj
+  jackal: # topic names for each sensor
+    rgb: ["/left/image_color/compressed"]
+    odom: ["/jackal_velocity_controller/odom"]
+    cmd_vel: ["/bluetooth_teleop/joy"] # joystick
+    lidar: ["/velodyne_points"]
+  spot: # topic names for each sensor
+    rgb: ["/image_raw/compressed"]
+    odom: ["/odom"]
+    cmd_vel: ["/joystick"] # linear and angular velocities
+    lidar: ["/velodyne_points"]
+  functions:
+    rgb: "process_rgb"
+    lidar: "process_pointclouds"
+    odom: "nav_to_xy_yaw_scand"

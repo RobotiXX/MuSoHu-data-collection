@@ -50,3 +50,6 @@ In terminal 2 :
 python3 record.py
 ```
 [Link to TF Tree / URDF](figures/frames.pdf)
+
+### Parsing bag files
+To parse bag files and create samples please follow [this](scripts/README.md) guide. To load the data, [here](scripts/dataloader.py) is a PyTorch dataloader example which loads ego-centeric images.
