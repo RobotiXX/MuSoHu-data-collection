@@ -14,7 +14,7 @@ from pyntcloud import PyntCloud
 from tqdm import tqdm
 from scipy.signal import savgol_filter
 
-from parser_utils import *
+from utils.parser_utils import *
 
 
 class MuSoHuParser:
@@ -252,6 +252,8 @@ class MuSoHuParser:
             print(
                 f"{bag_path} did not have the topics we were looking for. Skipping..."
             )
+            return
+        # print(f"Working on bag: {bag_path}")
         # remove backwards movement
         cut_trajs = filter_backwards(
             bag_img_data, bag_traj_data, bag_depth_data, bag_pc_data

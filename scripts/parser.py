@@ -1,22 +1,16 @@
+"""
+Main script to parse bag files.
+"""
+import os
 import argparse
 import pickle
 from pathlib import Path
 from tqdm import tqdm
-from tqdm.contrib.concurrent import process_map
+from tqdm.contrib.concurrent import process_map, thread_map
 
-from musohu_parser import MuSoHuParser
-from scand_parser import SCANDParser
-from omegaconf import OmegaConf
-
-
-def get_conf(name: str):
-    """Returns yaml config file in DictConfig format
-
-    Args:
-        name: (str) name of the yaml file
-    """
-    name = name if name.split(".")[-1] == "yaml" else f"{name}.yaml"
-    return OmegaConf.load(name)
+from utils.helpers import get_conf
+from utils.musohu_parser import MuSoHuParser
+from utils.scand_parser import SCANDParser
 
 
 def create_samples(input_path, obs_window: int = 6, pred_window: int = 8) -> dict:
@@ -96,7 +90,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "-c",
         "--conf",
-        default="conf/parser",
+        default="../conf/musohu_parser",
         type=str,
         help="Config file address.",
     )
@@ -109,12 +103,16 @@ if __name__ == "__main__":
     args = parser.parse_args()
     cfg_dir = args.conf
     cfg = get_conf(cfg_dir)
+    # dataset = "musohu" if "musohu" in cfg_dir.lower() else "scand"
     dataset = args.name
     if args.create_samples:
         # Creating samples
         save_path = Path(cfg.parsed_dir) / "samples.pkl"
+        if (save_path).exists():
+            save_path.rename(f"{save_path.stem} + '_old' + {save_path.suffix}")
         # List all the pickle files
         list_pickles = list(save_path.parent.glob("**/*.pkl"))
+        # list_pickles = [x for x in Path(cfg.save_dir).iterdir() if x.suffix == '.pkl']
         # Base dictionary to store data
         base_dict = dict()
         # Iterate over processed files and create samples from them
@@ -139,7 +137,8 @@ if __name__ == "__main__":
             parser = MuSoHuParser(cfg.musohu)
             bag_files = Path(parser.cfg.bags_dir).resolve()
             bag_files = [str(x) for x in bag_files.iterdir() if x.suffix == ".bag"]
-            process_map(parser.parse_bags, bag_files)
+            # if there are ram limitations, reduce the number of max_workers
+            process_map(parser.parse_bags, bag_files, max_workers=os.cpu_count() - 4)
 
         elif dataset == "scand":
             cfg.scand.update({"sample_rate": cfg.sample_rate})
@@ -147,6 +146,6 @@ if __name__ == "__main__":
             parser = SCANDParser(cfg.scand)
             bag_files = Path(parser.cfg.bags_dir).resolve()
             bag_files = [str(x) for x in bag_files.iterdir() if x.suffix == ".bag"]
-            process_map(parser.parse_bags, bag_files)
+            process_map(parser.parse_bags, bag_files, max_workers=os.cpu_count() - 4)
         else:
             raise Exception("Invalid dataset!")

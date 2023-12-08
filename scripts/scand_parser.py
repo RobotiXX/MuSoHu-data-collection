@@ -15,7 +15,7 @@ import rosbag
 from tqdm import tqdm
 from scipy.signal import savgol_filter
 
-from parser_utils import *
+from utils.parser_utils import *
 
 
 class SCANDParser:
@@ -128,7 +128,7 @@ class SCANDParser:
         # get start time of bag in seconds
         currtime = bag.get_start_time()
         starttime = currtime
-        print(f"{starttime = }")
+        # print(f"{starttime = }")
 
         curr_imdata = None
         curr_odomdata = None
@@ -205,7 +205,7 @@ class SCANDParser:
             print(e)
             print(f"Error loading {bag_path}. Skipping...")
 
-        robot_name = "spot" if "spot" in bag_path.lower() else "jackal"
+        # robot_name = "spot" if "spot" in bag_path.lower() else "jackal"
         self.cfg.topics = None
         if "spot" in bag_path.lower():
             self.cfg.topics = self.cfg.spot
@@ -237,6 +237,8 @@ class SCANDParser:
             print(
                 f"{bag_path} did not have the topics we were looking for. Skipping..."
             )
+            return
+        # print(f"Working on bag: {bag_path}")
         # remove backwards movement
         cut_trajs = filter_backwards_scand(bag_img_data, bag_traj_data, bag_pc_data)
         for i, (img_data_i, traj_data_i, pc_data_i) in enumerate(cut_trajs):
