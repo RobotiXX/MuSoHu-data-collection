@@ -3,9 +3,12 @@ parsed_dir: "data/train" # where to store/read parsed bags
 sample_rate: 4.0 # number of frames per second (hz)
 pred_len: 8 # action prediction length
 obs_len: 6 # observation length
+
+# config for parsing MuSoHu dataset
 musohu:
   bags_dir: "data/bags/musohu" # MuSoHu bags directory
   ang_offset: 0.0
+  skip_first_seconds: 8 # skip the first few seconds
   skip_traj_shorter: 50 # skip trajectories with fewer frames than skip_traj_short_traj
   topics: # topic names for each sensor
     depth: ["/zed2/zed_node/depth/depth_registered/compressed"]
@@ -19,9 +22,11 @@ musohu:
     lidar: "process_pointclouds"
     odom: "nav_to_xy_yaw"
 
+# config for parsing SCAND dataset
 scand:
   bags_dir: "data/bags/scand" # SCAND bags directory
   ang_offset: 0.0
+  skip_first_seconds: 5 # skip the first few seconds
   skip_traj_shorter: 20 # skip trajectories with fewer frames than skip_traj_short_traj
   jackal: # topic names for each sensor
     rgb: ["/left/image_color/compressed"]

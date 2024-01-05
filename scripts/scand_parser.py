@@ -139,8 +139,8 @@ class SCANDParser:
         for topic, msg, t in bag.read_messages(
             topics=[imtopic, odomtopic, actiontopic, pctopic]
         ):
-            if t.to_sec() - starttime < 5:
-                # skip the first five seconds
+            if t.to_sec() - starttime < self.cfg.skip_first_seconds:
+                # skip the first few seconds
                 continue
             if topic == imtopic:
                 curr_imdata = msg

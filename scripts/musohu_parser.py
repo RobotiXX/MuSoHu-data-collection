@@ -152,8 +152,8 @@ class MuSoHuParser:
         for topic, msg, t in bag.read_messages(
             topics=[imtopic, odomtopic, actiontopic, dptopic, pctopic]
         ):
-            if t.to_sec() - starttime < 2:
-                # skip the first two seconds
+            if t.to_sec() - starttime < self.cfg.skip_first_seconds:
+                # skip the first few seconds
                 continue
             if topic == imtopic:
                 curr_imdata = msg
