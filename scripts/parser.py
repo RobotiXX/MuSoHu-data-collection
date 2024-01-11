@@ -23,7 +23,7 @@ def create_samples(input_path, obs_window: int = 6, pred_window: int = 8) -> dic
     with input_path.open("rb") as f:
         data = pickle.load(f)
 
-    all_frames = list([x.as_posix() for x in (input_path.parent / "rgb").iterdir()])
+    all_frames = sorted(list([x for x in (input_path.parent / "rgb").iterdir()]), key=lambda x: int(x.name.split(".")[0]))
     traj_len = len(data["position"])
     seq_len = obs_window + pred_window
     positions = []

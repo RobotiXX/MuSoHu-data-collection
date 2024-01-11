@@ -87,7 +87,7 @@ class SocialNavDataset(Dataset):
         past_frames = []
         for img_address in self.data["past_frames"][idx]:
             # read all images and append them to a list
-            img = imread(img_address)
+            img = imread(img_address.as_posix())
             # print(f"{img.shape = }")
             img = transform(img)
             # img = img.refine_names(..., 'channels', 'height', 'width')
@@ -133,7 +133,7 @@ class SocialNavDataset(Dataset):
         #     (sample["past_positions"] - current.unsqueeze(0)), torch.linalg.inv(rot)
         # )  # these will be behind the ego
         sample["future_positions"] = torch.mm(
-            (sample["future_positions"] - current.unsqueeze(0)), torch.linalg.inv(rot)
+            (sample["future_positions"] - current.unsqueeze(0)), rot
         )
         # how many steps to each the goal?
         dt = np.random.randint(
