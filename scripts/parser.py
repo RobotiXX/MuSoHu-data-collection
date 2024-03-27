@@ -8,9 +8,9 @@ from pathlib import Path
 from tqdm import tqdm
 from tqdm.contrib.concurrent import process_map, thread_map
 
-from utils.helpers import get_conf
-from utils.musohu_parser import MuSoHuParser
-from utils.scand_parser import SCANDParser
+from helpers import get_conf
+from musohu_parser import MuSoHuParser
+from scand_parser import SCANDParser
 
 
 def create_samples(input_path, obs_window: int = 6, pred_window: int = 8) -> dict:
@@ -90,7 +90,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "-c",
         "--conf",
-        default="../conf/musohu_parser",
+        default="./conf/parser",
         type=str,
         help="Config file address.",
     )

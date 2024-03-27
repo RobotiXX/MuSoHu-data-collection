@@ -14,7 +14,7 @@ from pyntcloud import PyntCloud
 from tqdm import tqdm
 from scipy.signal import savgol_filter
 
-from utils.parser_utils import *
+from parser_utils import *
 
 
 class MuSoHuParser:
@@ -193,9 +193,6 @@ class MuSoHuParser:
             ang_offset=ang_offset,
         )
         # smoothing pos and actions
-        traj_data["yaw"] = savgol_filter(
-            traj_data["yaw"], window_length=31, polyorder=3, mode="nearest"
-        )
         traj_data["vw"][:, 0] = savgol_filter(
             traj_data["vw"][:, 0], window_length=31, polyorder=3, mode="nearest"
         )
